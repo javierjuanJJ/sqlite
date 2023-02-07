@@ -8,7 +8,7 @@ cursor.execute('''
     CREATE TABLE customers(
         first_name text,
         last_name text,
-        email text,
+        email text
     )
 ''')
 
