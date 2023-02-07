@@ -5,10 +5,10 @@ connection = sqlite3.connect('customer.db')
 cursor = connection.cursor()
 
 cursor.execute('''
-    CREATE TABLE customers(
-        first_name text,
-        last_name text,
-        email text
+    INSERT INTO customers VALUES (
+        '1',
+        '2',
+        '3'
     )
 ''')
 
