@@ -4,13 +4,19 @@ connection = sqlite3.connect('customer.db')
 
 cursor = connection.cursor()
 
-cursor.execute('''
+many_customers=[
+    ('1','2','3'),
+('4','5','6'),
+('7','8','9'),
+]
+
+cursor.executemany('''
     INSERT INTO customers VALUES (
-        '1',
-        '2',
-        '3'
+        ?,
+        ?,
+        ?
     )
-''')
+''',many_customers)
 
 
 connection.commit()
