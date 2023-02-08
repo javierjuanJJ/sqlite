@@ -10,14 +10,11 @@ many_customers=[
 ('7','8','9'),
 ]
 
-cursor.executemany('''
-    INSERT INTO customers VALUES (
-        ?,
-        ?,
-        ?
-    )
-''',many_customers)
+cursor.execute('''
+   SELECT * FROM customers
+''')
 
+print(cursor.fetchall())
 
 connection.commit()
 
