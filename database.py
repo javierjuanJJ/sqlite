@@ -11,7 +11,7 @@ many_customers=[
 ]
 
 cursor.execute('''
-   SELECT * FROM customers
+   SELECT rowid,* FROM customers
 ''')
 
 print(cursor.fetchall())
