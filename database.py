@@ -11,6 +11,14 @@ many_customers=[
 ]
 
 cursor.execute('''
+      UPDATE customers
+SET first_name = 'a'
+WHERE rowid = 1;
+''')
+
+connection.commit()
+
+cursor.execute('''
    SELECT rowid,* FROM customers
 ''')
 
