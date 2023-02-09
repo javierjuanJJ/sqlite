@@ -11,8 +11,7 @@ many_customers=[
 ]
 
 cursor.execute('''
-      UPDATE customers
-SET first_name = 'a'
+     DELETE FROM customers
 WHERE rowid = 1;
 ''')
 
